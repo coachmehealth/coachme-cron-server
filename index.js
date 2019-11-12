@@ -19,7 +19,7 @@ cron.schedule(`*/1 * * * *`, function() {
   console.log("A minute in cron land as passed!!!!");
   axios
     .get(
-      `http://localhost:4000/twilioRoute/getAllScheduledMessages`,
+      `${process.env.BACKEND_URL}/twilioRoute/getAllScheduledMessages`,
       requestOptions
     )
     .then(results => {
