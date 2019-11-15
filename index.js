@@ -12,7 +12,8 @@ const client = require('twilio')(accountSid, authToken);
 const http = require('http');
 
 const requestOptions = {
-    headers: { accept: 'application/json' }
+    headers: { accept: 'application/json' },
+    Authorization: process.env.SERVER_SECRET
 };
 
 // sets cron server to check the scheduledMessages table through the
