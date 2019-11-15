@@ -36,7 +36,11 @@ cron.schedule(`*/1 * * * *`, function() {
                     // converts the values from the scheduledMessages table to Tuesday,6:06pm
                     // so that we can use moment to check if the message should be sent.
                     if (
-                        `${results.data.data[i].weekday},${results.data.data[i].hour}:${results.data.data[i].min}${results.data.data[i].ampm}` ===
+                        `${results.data.data[i].weekday},${
+                            results.data.data[i].hour
+                        }:${results.data.data[i].min}${results.data.data[
+                            i
+                        ].ampm.toLowerCase()}` ===
                         moment()
                             .tz('America/Los_Angeles')
                             .format('dddd,h:mma')
