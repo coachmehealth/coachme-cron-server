@@ -3,13 +3,13 @@
 #### 1️⃣ Backend deployed at
 
 heroku.com <br>
-https://coach-me-backend.herokuapp.com/
+https://coach-me-cron.herokuapp.com/
 
 ---
 
 ### Backend framework
 
--   Node.js, Express, http, and cronjob gives us the flexibility and functionality needed to create a fully functional custom server that is tasked with intercepting incoming sms messages from coachme patients as well as dispatch scheduled messages from the https://coach-me-backend.herokuapp.com/ backend.
+-   Node.js, Express, http, and cronjob gives us the flexibility and functionality needed to create a fully functional custom server that is tasked with intercepting incoming sms messages from coachme patients as well as dispatch scheduled messages from the https://coach-me-development.herokuapp.com backend.
 -   We are going to use http with express to create a listening server that can intercept incoming sms messages and a cron function that can pull data from the coachme backend endpoint /twilioRoute/getAllScheduledMessages every minute and send an sms messages according to their send time stamps.
 
 ## 2️⃣ CronJob function
